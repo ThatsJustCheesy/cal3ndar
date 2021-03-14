@@ -1,6 +1,7 @@
 {
   "name": "c4lendar",
   "version": "0.1.0",
+  "homepage": "/cal3ndar",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
