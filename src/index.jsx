@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const apiURL = 'https://cal3ndar.herokuapp.com';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App apiURL="http://localhost:3001"/>
+    <App apiURL={apiURL}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
