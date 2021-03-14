@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App apiURL="http://localhost:3001"/>
   </React.StrictMode>,
   document.getElementById('root')
 );

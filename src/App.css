@@ -1,21 +1,8 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body {
   background-color: #282c34;
-  min-height: 100vh;
+}
+
+.Outer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +11,43 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .Calendar {
+  margin-right: 4vw;
+}
+
+.App .form-field {
+  margin-top: 2vh;
+}
+.App input, .App textarea {
+  width: 100%;
+  min-width: 20vw;
+  margin-top: 4px;
+  font-family: inherit;
+}
+.App input {
+  height: calc(10px + 2vmin);
+}
+.App input:invalid {
+  border: none;
+  border-bottom: groove 4px #dc2e51;
+}
+.App textarea {
+  display: inline-block;
+}
+
+.App button {
+  width: 102%;
+  height: calc(16px + 3vmin);
+  margin: 0 auto;
+  font-size: calc(8px + 2vmin);
 }
