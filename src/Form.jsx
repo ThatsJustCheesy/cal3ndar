@@ -1,40 +1,41 @@
-export default function Form(props) {
+export function Form(props) {
   function onSubmit(e) {
     e.preventDefault();
     
+    if (props.onSubmitInitiated) props.onSubmitInitiated();
+    
     const req = new XMLHttpRequest();
     req.open(props.method, props.url);
-    req.onload = props.onSubmitted;
-    req.onerror = props.onError;
+    req.onload = props.onSubmitSuccess;
+    req.onerror = props.onSubmitError;
     req.send(new URLSearchParams(new FormData(e.target)));
   }
   
   return (
     <form action={props.apiURL + '/events'} method="post" onSubmit={onSubmit}>
-      <h2>Add new event</h2>
+      {props.children}
       <div className="form-field">
-        <label for="summary">Title </label>
-        <input type="text" name="summary" id="summary" required placeholder="Required"/>
-      </div>
-      <div className="form-field">
-        <label for="start">Starts </label>
-        <input type="datetime-local" name="start" id="start" required/>
-      </div>
-      <div className="form-field">
-        <label for="end">Ends </label>
-        <input type="datetime-local" name="end" id="end" required/>
-      </div>
-      <div className="form-field">
-        <label for="description">Description </label>
-        <textarea name="description" id="description" rows="6"/>
-      </div>
-      <div className="form-field">
-        <label for="location">Location </label>
-        <input type="text" name="location" id="location"/>
-      </div>
-      <div className="form-field">
-        <button type="submit">Add</button>
+        <button type="submit" disabled={!props.enabled}>
+          {props.enabled ? 'Add' : 'Adding…'}
+        </button>
       </div>
     </form>
+  );
+}
+
+export function InputFormField(props) {
+  return (
+      <div className="form-field">
+        <label htmlFor={props.id}>{props.label} </label>
+        <input type={props.type} name={props.name ?? props.id} id={props.id} required={props.required} placeholder={props.placeholder ?? (props.required ? 'Required' : '')}/>
+      </div>
+  );
+}
+export function TextAreaFormField(props) {
+  return (
+      <div className="form-field">
+        <label htmlFor={props.id}>{props.label} </label>
+        <textarea name={props.name ?? props.id} id={props.id} required={props.required} placeholder={props.placeholder ?? (props.required ? 'Required' : '')} rows={props.rows}/>
+      </div>
   );
 }
