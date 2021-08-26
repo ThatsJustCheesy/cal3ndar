@@ -28,26 +28,35 @@ body {
 .App .form-field {
   margin-top: 2vh;
 }
-.App input, .App textarea {
+.App .form-field .input {
   width: 100%;
   min-width: 20vw;
   margin-top: 4px;
-  font-family: inherit;
 }
-.App input {
-  height: calc(10px + 2vmin);
+.App .form-field .input-large {
+  height: calc(16px + 1vh);
 }
-.App input:invalid {
+.App .form-field .input-large,
+.App .form-field .datetime-picker {
+  font-size: calc(10px + 1vmin);
+}
+.App .form-field .datetime-picker {
+  width: 101.5%;
+  color: black;
+  background: white;
+}
+.App .form-field .input-large:invalid, .App .form-field .react-datetime-picker__inputGroup__input:invalid {
   border: none;
   border-bottom: groove 4px #dc2e51;
 }
-.App textarea {
+.App .form-field .textarea-large {
   display: inline-block;
+  font-family: inherit;
 }
 
-.App button {
+.App .form-field .button-large {
   width: 102%;
-  height: calc(16px + 3vmin);
+  height: calc(16px + 3vh);
   margin: 0 auto;
   font-size: calc(8px + 2vmin);
 }

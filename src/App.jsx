@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, InputFormField, TextAreaFormField } from './Form.jsx'
+import { Form, InputFormField, DateTimeFormField, TextAreaFormField, SubmitButton } from './Form.jsx';
 import './App.css';
 
 const defaultCalendarSrc = "https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&src=Zzh1ZGFmNWg1ZTBocmptc21mZm1nY3NxYzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23B39DDB&showTitle=0&showNav=1&showDate=1&showPrint=0&showCalendars=0&showTz=1&mode=AGENDA";
@@ -15,6 +15,8 @@ export default function App(props) {
     'success': '✅ Event added successfully; the calendar view may take a moment to refresh',
     'failure': '❌ The request failed'
   }[lastSubmissionStatus] ?? '';
+  
+  const [formData, setFormData] = useState({});
   
   return (
     <div className="Outer">
@@ -37,11 +39,12 @@ export default function App(props) {
         
         <div>
           <h2 className="flush-with-top">Add new event</h2>
-          <p className="note">Modern non-Firefox browser required for date pickers (sorry)</p>
           
           <Form
             url={props.apiURL + '/events'}
             method="post"
+            
+            data={formData}
             
             onSubmitInitiated={() => {
               setLastSubmissionStatus('none');
@@ -63,13 +66,13 @@ export default function App(props) {
               setFormEnabled(true);
             }}
             
-            enabled={formEnabled}
           >
-            <InputFormField id="summary" type="text" label="Title" required/>
-            <InputFormField id="start" type="datetime-local" label="Starts" required/>
-            <InputFormField id="end" type="datetime-local" label="Ends" required/>
-            <TextAreaFormField id="description" label="Description" rows="6"/>
-            <InputFormField id="location" type="text" label="Location"/>
+            <InputFormField id="summary" type="text" label="Title" required data={formData} setData={setFormData}/>
+            <DateTimeFormField id="start" type="datetime-local" label="Starts" required data={formData} setData={setFormData}/>
+            <DateTimeFormField id="end" type="datetime-local" label="Ends" required data={formData} setData={setFormData}/>
+            <TextAreaFormField id="description" label="Description" rows="6" data={formData} setData={setFormData}/>
+            <InputFormField id="location" type="text" label="Location" data={formData} setData={setFormData}/>
+            <SubmitButton enabled={formEnabled} label={formEnabled ? 'Add' : 'Adding…'} data={formData} setData={setFormData}/>
           </Form>
           
           <p className={`note ${lastSubmissionStatus}-text`}>
