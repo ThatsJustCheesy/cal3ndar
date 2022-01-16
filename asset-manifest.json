@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/cal3ndar/static/css/main.783e0d61.chunk.css",
-    "main.js": "/cal3ndar/static/js/main.55dd41e3.chunk.js",
-    "main.js.map": "/cal3ndar/static/js/main.55dd41e3.chunk.js.map",
-    "runtime-main.js": "/cal3ndar/static/js/runtime-main.5c5a2d8a.js",
-    "runtime-main.js.map": "/cal3ndar/static/js/runtime-main.5c5a2d8a.js.map",
-    "static/css/2.d47d8948.chunk.css": "/cal3ndar/static/css/2.d47d8948.chunk.css",
-    "static/js/2.288aaa5c.chunk.js": "/cal3ndar/static/js/2.288aaa5c.chunk.js",
-    "static/js/2.288aaa5c.chunk.js.map": "/cal3ndar/static/js/2.288aaa5c.chunk.js.map",
-    "static/js/3.9c3603da.chunk.js": "/cal3ndar/static/js/3.9c3603da.chunk.js",
-    "static/js/3.9c3603da.chunk.js.map": "/cal3ndar/static/js/3.9c3603da.chunk.js.map",
+    "main.js": "/cal3ndar/static/js/main.b9294898.chunk.js",
+    "main.js.map": "/cal3ndar/static/js/main.b9294898.chunk.js.map",
+    "runtime-main.js": "/cal3ndar/static/js/runtime-main.3dc89f8e.js",
+    "runtime-main.js.map": "/cal3ndar/static/js/runtime-main.3dc89f8e.js.map",
+    "static/css/2.0514c5e1.chunk.css": "/cal3ndar/static/css/2.0514c5e1.chunk.css",
+    "static/js/2.6d79fb23.chunk.js": "/cal3ndar/static/js/2.6d79fb23.chunk.js",
+    "static/js/2.6d79fb23.chunk.js.map": "/cal3ndar/static/js/2.6d79fb23.chunk.js.map",
+    "static/js/3.118dc76c.chunk.js": "/cal3ndar/static/js/3.118dc76c.chunk.js",
+    "static/js/3.118dc76c.chunk.js.map": "/cal3ndar/static/js/3.118dc76c.chunk.js.map",
     "index.html": "/cal3ndar/index.html",
-    "static/css/2.d47d8948.chunk.css.map": "/cal3ndar/static/css/2.d47d8948.chunk.css.map",
+    "static/css/2.0514c5e1.chunk.css.map": "/cal3ndar/static/css/2.0514c5e1.chunk.css.map",
     "static/css/main.783e0d61.chunk.css.map": "/cal3ndar/static/css/main.783e0d61.chunk.css.map",
-    "static/js/2.288aaa5c.chunk.js.LICENSE.txt": "/cal3ndar/static/js/2.288aaa5c.chunk.js.LICENSE.txt"
+    "static/js/2.6d79fb23.chunk.js.LICENSE.txt": "/cal3ndar/static/js/2.6d79fb23.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5c5a2d8a.js",
-    "static/css/2.d47d8948.chunk.css",
-    "static/js/2.288aaa5c.chunk.js",
+    "static/js/runtime-main.3dc89f8e.js",
+    "static/css/2.0514c5e1.chunk.css",
+    "static/js/2.6d79fb23.chunk.js",
     "static/css/main.783e0d61.chunk.css",
-    "static/js/main.55dd41e3.chunk.js"
+    "static/js/main.b9294898.chunk.js"
   ]
 }
